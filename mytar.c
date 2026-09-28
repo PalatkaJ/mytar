@@ -380,7 +380,7 @@ int main(int argc, char *argv[]) {
         char option = (*argv)[1];
         switch (option) {
             case 'f':
-                strncpy(command_args.cmd_archive_name, *argv, sizeof(command_args.cmd_archive_name) - 1);
+                strncpy(command_args.cmd_archive_name, *++argv, sizeof(command_args.cmd_archive_name) - 1);
                 command_args.cmd_archive_name[sizeof(command_args.cmd_archive_name) - 1] = '\0';
                 break;
             case 't':
