@@ -32,25 +32,25 @@ gcc -std=c11 -Wall -Wextra -O2 -o mytar mytar.c
 List the contents of an archive:
 
 ```bash
-./mytar -tf archive.tar
+./mytar -t -f archive.tar
 ```
 
 Extract an archive:
 
 ```bash
-./mytar -xf archive.tar
+./mytar -x -f archive.tar
 ```
 
 Extract with verbose output:
 
 ```bash
-./mytar -xvf archive.tar
+./mytar -x -v -f archive.tar
 ```
 
 List only specific files from an archive:
 
 ```bash
-./mytar -tf archive.tar file1.txt file2.txt
+./mytar -t -f archive.tar file1.txt file2.txt
 ```
 
 ## Notes
@@ -63,9 +63,9 @@ List only specific files from an archive:
 
 ```bash
 gcc -std=c11 -Wall -Wextra -O2 -o mytar mytar.c
-./mytar -cf archive.tar file1.txt file2.txt
-./mytar -tf archive.tar
-./mytar -xf archive.tar
+tar -cf archive.tar file1.txt file2.txt
+./mytar -t -f archive.tar
+./mytar -x -f archive.tar
 ```
 
-The first command creates the archive, the second lists files inside it, and the third extracts them back to the working directory.
+The first command creates the archive (using the official tar utility), the second lists files inside it, and the third extracts them back to the working directory.
