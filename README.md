@@ -1,4 +1,4 @@
-# tar-credit
+# Mytar
 
 A small C implementation of a subset of the `tar` archive format. The project focuses on reading tar archives, listing their contents, and extracting regular files without external dependencies.
 
